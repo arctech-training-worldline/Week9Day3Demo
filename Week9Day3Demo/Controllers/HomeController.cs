@@ -28,6 +28,11 @@ namespace Week9Day3Demo.Controllers
             return View();
         }
 
+        public IActionResult Jump()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
