@@ -6,3 +6,29 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<a asp-page="/Payment"></a>
+
+<h2>On the server the current date and time is @DateTime.Now</h2>
+
+@{
+    var status = DateTime.Now.Day % 2 == 0 ? "even" : "odd";
+}
+
+@if (DateTime.IsLeapYear(DateTime.Now.Year))
+{
+    <span>@DateTime.Now.Year is a leap year, but today is an @status day.</span>
+}
+else
+{
+    <span>@DateTime.Now.Year is not a leap year, but today is an @status day.</span>
+}
+
+<br />
+
+<ul>
+@for (var index = 1; index <= 5; index++)
+{
+    <li>index = @index</li>
+}
+</ul>
